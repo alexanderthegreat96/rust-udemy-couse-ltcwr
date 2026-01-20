@@ -1,9 +1,11 @@
 fn main() {
-    println!("{}", !true);
-    println!("{}", !false);
+    // boolean data type
+    println!("!true is: {}", !true);
+    println!("!false is: {}", !false);
 
-    let age = 13;
-    let can_see_rated_r_movie = age >= 17;
-    let cannot_see_rated_r_movie = !can_see_rated_r_movie;
-    println!("I am {age} years old. Can I not see this scary movie? {cannot_see_rated_r_movie}");
+    let age: i32 = 31;
+    let is_young: bool = age < 31;
+    let is_old: bool = !is_young;
+
+    println!("{} | {} | {}", age, is_young, is_old);
 }

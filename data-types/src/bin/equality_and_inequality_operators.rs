@@ -1,4 +1,5 @@
 fn main() {
+    // equality  | inequallity
     println!("{}", "Coke" == "Pepsi");
     println!("{}", "Coke" != "Pepsi");
     println!("{}", "Coke" == "coke");
