@@ -1,4 +1,7 @@
 fn main() {
+    // the debug mecro
+    // simply works similar to regular printing
+    // but dirtier
     let seasons = ["Spring", "Summer", "Fall", "Winter"];
 
     println!("{}", 5);
@@ -6,5 +9,5 @@ fn main() {
     println!("{}", true);
     println!("{seasons:#?}");
 
-    dbg!(seasons);
+    dbg!(seasons); // the benefit of the developer and not the end user
 }

@@ -70,7 +70,8 @@ fn main() {
         println!("{} is over forty (Age: {}).", older.user_name, older.age);
     }
 
-    let users = vec![male, female, older];
+    // we are borrowing the values here
+    let users = vec![&male, &female, &older];
 
     println!("\n--- User Directory ---");
     for user in &users {
@@ -90,4 +91,14 @@ fn main() {
     let is_young: bool = age < 35;
 
     println!("{} {} {}", age.is_positive(), age.is_negative(), is_young);
+
+    // and operator -> &&
+    if male.is_over_fourty() && male.is_over_fourty() {
+        println!("Both make and female are over fourty.");
+    }
+
+    // or operator -> ||
+    if male.is_over_fourty() || older.is_over_fourty() {
+        println!("Either the male or the tranny are over fourty.");
+    }
 }
