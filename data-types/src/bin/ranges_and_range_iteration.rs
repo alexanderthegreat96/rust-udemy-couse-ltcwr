@@ -48,6 +48,9 @@ fn main() {
         letters.push(char);
     }
 
+    // since a string is a collection of chars
+    // we can simply chain .iter().collect();
+    // and this returns us the alphabet stringified
     let alphabet: String = letters.iter().collect();
     println!("The alphabet has thse chars: {}", alphabet);
 }
