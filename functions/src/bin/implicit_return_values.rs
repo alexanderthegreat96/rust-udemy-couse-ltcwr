@@ -6,6 +6,11 @@ fn main() {
     println!("The square of 13 is {result}");
 }
 
+// implicit returns
+// you can return a value without
+// using the return keyword
+// you also need to remove ;
+// after removing return
 fn square(number: i32) -> i32 {
     number * number
 }

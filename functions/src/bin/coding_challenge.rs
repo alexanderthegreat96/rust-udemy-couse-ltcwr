@@ -30,3 +30,44 @@ println!("{:?}", alphabets("aardvark")); -> (true, false)
 println!("{:?}", alphabets("zoology"));  -> (false, true)
 println!("{:?}", alphabets("zebra"));    -> (true, true)
 */
+
+use std::ops::RangeInclusive;
+
+fn is_even(number: i32) -> bool {
+    // if the remainder of the division is 0
+    // the it's even
+    return number % 2 == 0;
+}
+
+fn apply_to_jobs(number: i32, title: String) -> () {
+    println!("I'm applying to {number} {title} jobs");
+}
+
+fn alphabets(text: String) -> (bool, bool) {
+    return (text.contains('a'), text.contains('z'));
+}
+
+// main here also returns an unit
+// which si almost the same as void in other languages
+fn main() -> () {
+    apply_to_jobs(100, String::from("engineering"));
+
+    for num in 0..=10 {
+        if is_even(num) {
+            println!("Number: {num} is even");
+        } else {
+            println!("Number: {num} is not even");
+        }
+    }
+
+    // using RangeInclusive here
+    // because we are also including z
+    let alphabet: RangeInclusive<char> = 'a'..='z';
+
+    let result = alphabets(alphabet.into_iter().collect());
+    println!("{:?}", result);
+
+    println!("{:?}", alphabets(String::from("aardvark")));
+    println!("{:?}", alphabets(String::from("zoology")));
+    println!("{:?}", alphabets(String::from("zebra")));
+}
