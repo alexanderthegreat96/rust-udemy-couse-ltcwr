@@ -1,4 +1,8 @@
 fn main() {
+    // quite easy
+    // only applied after an initial if statement
+    // checks for another condition after if
+
     let season = "summer";
 
     if season == "summer" {

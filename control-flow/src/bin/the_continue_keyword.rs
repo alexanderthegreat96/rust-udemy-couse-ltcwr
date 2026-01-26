@@ -1,6 +1,8 @@
 fn main() {
     let mut seconds = 21;
 
+    // continue will skip the loop
+    // and move to the next iteration
     loop {
         if seconds <= 0 {
             println!("Blastoff! 🚀");
