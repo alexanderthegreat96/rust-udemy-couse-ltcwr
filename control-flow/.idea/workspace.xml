@@ -12,16 +12,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a899dcb8-fb87-41c1-8d7c-df0ac1a42a02" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bin/assigning_result_of_if_statement_to_variable.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/assigning_result_of_if_statement_to_variable.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/recursion.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/recursion.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_continue_keyword.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_continue_keyword.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_else_if_statement.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_else_if_statement.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_else_statement.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_else_statement.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_if_statement.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_if_statement.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_loop_and_break_keywords.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_loop_and_break_keywords.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_match_statement.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_match_statement.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/the_match_statement_with_multiple_values_and_conditionals.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/the_match_statement_with_multiple_values_and_conditionals.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/while_loop.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/while_loop.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/String_&amp;String_str_and_&amp;str.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/dangling_references.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/dangling_references.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/immutable_and_mutable_reference_parameters.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/immutable_and_mutable_reference_parameters.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/moves_and_ownership.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/moves_and_ownership.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/multiple_immutable_references.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/multiple_immutable_references.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/mutable_parameters.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/mutable_parameters.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/mutable_reference_restrictions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/mutable_reference_restrictions.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/ownership_and_function_parameters.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/ownership_and_function_parameters.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/ownership_with_immutable_and_mutable_references.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/ownership_with_immutable_and_mutable_references.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/references_and_borrowing.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/references_and_borrowing.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/return_values_I.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/return_values_I.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/return_values_II.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/return_values_II.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/the_clone_method.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/the_clone_method.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/the_copy_trait.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/the_copy_trait.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/the_copy_trait_with_references.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/the_copy_trait_with_references.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/the_dereference_operator.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/the_dereference_operator.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/the_drop_function.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/the_drop_function.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/bin/the_push_str_method_on_a_string_type.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/bin/the_push_str_method_on_a_string_type.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/coding_challenge_1.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/coding_challenge_2.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ownership/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../ownership/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +46,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="aJVIpU8P" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="38mtzgSwRNg4b1xnPobkn72yqVH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,6 +60,7 @@
     "Cargo.Run recursion.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.rust.reset.selective.auto.import": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "origin",
@@ -134,6 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769416838196</updated>
       <workItem from="1769416840117" duration="1558000" />
+      <workItem from="1769989813038" duration="22000" />
     </task>
     <servers />
   </component>

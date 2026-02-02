@@ -34,3 +34,34 @@ Invoke `show_itinerary`. The final output should be:
 
 "The plan is...Philadelphia and New York and Boston."
 */
+
+fn main() {
+    let mut trip = start_trip();
+
+    visit_philadelphia(&mut trip);
+    visit_boston(&mut trip);
+    visit_new_york(&mut trip);
+
+    show_itinerary(&trip);
+}
+
+fn start_trip() -> String {
+    let trip = String::from("The plan is...");
+    trip
+}
+
+fn visit_philadelphia(trip: &mut String) {
+    trip.push_str("Visit Philadelphia and");
+}
+
+fn visit_boston(trip: &mut String) {
+    trip.push_str(" Visit Boston and");
+}
+
+fn visit_new_york(trip: &mut String) {
+    trip.push_str(" Visit New York");
+}
+
+fn show_itinerary(trip: &String) {
+    println!("{}.", trip);
+}
