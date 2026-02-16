@@ -1,4 +1,7 @@
 fn main() {
+    // deref coercion
+    // &String  = &str
+    // same applies for array slices
     let values = [4, 8, 15, 16, 23, 42];
 
     let regular_reference = &values;

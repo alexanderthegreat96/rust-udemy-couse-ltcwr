@@ -1,26 +1,39 @@
+/// Represents types of milk with associated data or unit variants.
 enum Milk {
-    Lowfat(i32),
-    Whole,
+    LowFat(i32), // Tuple variant carrying a percentage value
+    WholeMilk,   // Unit variant
 }
 
 impl Milk {
+    /// Consumes the Milk instance and performs pattern matching.
+    /// By taking 'self', we move ownership into this method.
     fn drink(self) {
         match self {
-            Milk::Lowfat(2) => {
-                println!("Delicious, 2% is my favorite!");
+            // SPECIFIC MATCH: Rust matches from top to bottom.
+            // We must put specific values (like 2) before the general variable binding.
+            Milk::LowFat(2) => {
+                println!("Delicious 2% milk is my favorite!");
             }
-            Milk::Lowfat(percent) => {
-                println!("You've got the lowfat {percent} percent version!");
+
+            // GENERAL MATCH: This 'percent' variable binds to any i32 value
+            // that wasn't caught by the specific matches above.
+            Milk::LowFat(percent) => {
+                println!("You've got the low fat: {percent}%.");
             }
-            Milk::Whole => {
-                println!("You've got the whole milk!");
-            }
+
+            // UNIT MATCH: Handles the WholeMilk variant.
+            Milk::WholeMilk => {
+                println!("You've got the whole milk.");
+            } // NOTE: No '_' (catch-all) is needed here because all
+              // possible variants of the Milk enum are explicitly handled.
+              // This makes the match "exhaustive."
         }
     }
 }
 
 fn main() {
-    Milk::Lowfat(2).drink();
-    Milk::Lowfat(1).drink();
-    Milk::Whole.drink();
+    // Calling the method on a specific instance.
+    // Because 'drink' takes ownership, these instances are dropped after the call.
+    Milk::LowFat(2).drink();
+    Milk::WholeMilk.drink();
 }

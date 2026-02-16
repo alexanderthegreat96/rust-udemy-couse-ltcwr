@@ -31,6 +31,17 @@ impl Computer {
 }
 
 fn main() {
+    // the builder pattern
+    // it is a design parrent
+    // recommended to write or structure code
+    // to solve specific problems
+    // the code idea is simple: given a type
+    // we chain methods on the type
+    // in order to do something
+    // the most used example is to mutate data on that type
+    // the builder pattern returns the self keyword back
+    // very simular to how other languages do it
+    // they basically return the class / type instance back
     let mut computer = Computer::new(String::from("M3 Max"), 64, 2);
 
     computer

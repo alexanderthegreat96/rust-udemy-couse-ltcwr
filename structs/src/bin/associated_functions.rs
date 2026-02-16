@@ -6,6 +6,10 @@ struct TaylorSwiftSong {
 }
 
 impl TaylorSwiftSong {
+    // it's what i've been talking about
+    // this is a great initialiation
+    // this is a constructor
+    // this is what OOP looks like normally
     fn new(title: String, release_year: u32, duration_secs: u32) -> Self {
         TaylorSwiftSong {
             title,
@@ -34,6 +38,7 @@ impl TaylorSwiftSong {
 }
 
 fn main() {
+    // just testing the constructor here
     let blank_space = TaylorSwiftSong::new(String::from("Blank Space"), 2014, 231);
 
     blank_space.display_song_info();

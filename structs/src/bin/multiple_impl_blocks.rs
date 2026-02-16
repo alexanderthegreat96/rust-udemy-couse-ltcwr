@@ -5,6 +5,8 @@ struct TaylorSwiftSong {
     duration_secs: u32,
 }
 
+// we can define multiple impl blocks for the same type
+// certain concepts in rusts require multiple impl blocks for the same type
 impl TaylorSwiftSong {
     fn new(title: String, release_year: u32, duration_secs: u32) -> Self {
         Self {

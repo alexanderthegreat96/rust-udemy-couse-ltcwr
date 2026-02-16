@@ -7,6 +7,7 @@ enum LaundryCycle {
 impl LaundryCycle {
     fn wash_laundry(&self) {
         match self {
+            // doing a match on self
             LaundryCycle::Cold => {
                 println!("Running the laundry with cold temperature")
             }
@@ -21,6 +22,9 @@ impl LaundryCycle {
 }
 
 fn main() {
+    // we can hook methods to enums
+    // same way we are doing with structs
+    // we use the impl keyword
     LaundryCycle::Cold.wash_laundry();
     let hot_cycle = LaundryCycle::Hot { temperature: 100 };
     hot_cycle.wash_laundry();

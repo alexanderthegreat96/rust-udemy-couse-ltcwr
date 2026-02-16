@@ -6,6 +6,10 @@ struct TaylorSwiftSong {
 }
 
 impl TaylorSwiftSong {
+    // now we are simply using references
+    // this is how we're actually supposed to write this
+    // if we want to call multiple methods
+    // we are going to use a reference
     fn display_song_info(&self) {
         println!("Title: {}", self.title);
         println!("Release Year: {}", self.release_year);

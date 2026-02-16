@@ -14,6 +14,9 @@ impl TaylorSwiftSong {
     }
 
     // Mutable struct value (self parameter takes ownership, has permission to mutate)
+    // normally, we're not suppose to do this
+    // unless, we want to terminate the call stack
+    // mut self: Self
     fn double_length(mut self) {
         self.duration_secs = self.duration_secs * 2;
         println!("{:#?}", self);

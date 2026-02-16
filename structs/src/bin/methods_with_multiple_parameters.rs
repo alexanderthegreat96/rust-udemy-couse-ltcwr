@@ -16,6 +16,9 @@ impl TaylorSwiftSong {
         self.duration_secs = self.duration_secs * 2;
     }
 
+    // this uses the same struct
+    // but different with a different initialization
+    // a bit strange, but it works
     fn is_longer_than(&self, other: &Self) -> bool {
         self.duration_secs > other.duration_secs
     }

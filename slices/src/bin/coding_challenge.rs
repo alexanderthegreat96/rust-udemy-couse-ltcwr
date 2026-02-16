@@ -32,3 +32,35 @@ to the "Cocoa Puffs" String (in other words, a &String).
 Declare a `puffs` variable that extracts a slice of
 the text "Puffs" from the String. Print the slice.
 */
+
+fn main() {
+    let mut cereals: [String; 5] = [
+        String::from("Cookie Crisp"),
+        String::from("Cinnamon Toast Crunch"),
+        String::from("Frosted Flakes"),
+        String::from("Cocoa Puffs"),
+        String::from("Captain Crunch"),
+    ];
+
+    let first_two = &cereals[0..2];
+    println!("First two: {:?}", first_two);
+
+    let mid_three = &cereals[1..4];
+    println!("Middle three: {:?}", mid_three);
+
+    let last_three = &cereals[2..];
+    println!("Last three: {:?}", last_three);
+
+    cereals[4] = String::from("Lucky Charms");
+    println!("Complete array: {:?}", cereals);
+
+    let cookie_crisp: &String = &cereals[0];
+
+    let cookie = &cookie_crisp[0..6];
+    println!("Slice 1: {}", cookie);
+
+    let cocoa_puffs: &String = &cereals[3];
+    let puffs = &cocoa_puffs[6..];
+
+    println!("Slice 2: {}", puffs);
+}

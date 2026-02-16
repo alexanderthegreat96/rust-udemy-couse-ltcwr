@@ -1,4 +1,7 @@
 fn main() {
+    // similar to objects in oop
+    // or classes
+    // they combine multiple data types into 1
     struct Coffee {
         price: f64,
         name: String,

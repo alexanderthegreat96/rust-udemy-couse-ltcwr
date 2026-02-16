@@ -1,3 +1,4 @@
+#[derive(Debug)] // we need this to be able to print
 struct Coffee {
     name: String,
     price: f64,
@@ -9,6 +10,7 @@ fn main() {
     drink_coffee(&mut mocha);
 
     println!("{}", mocha.price);
+    println!("{:?}", mocha);
 }
 
 fn make_coffee(name: String, price: f64, is_hot: bool) -> Coffee {
@@ -19,6 +21,7 @@ fn make_coffee(name: String, price: f64, is_hot: bool) -> Coffee {
     }
 }
 
+// this mutates cofee, duh
 fn drink_coffee(coffee: &mut Coffee) {
     println!("Drinking my delicious {}", coffee.name);
     coffee.is_hot = false;

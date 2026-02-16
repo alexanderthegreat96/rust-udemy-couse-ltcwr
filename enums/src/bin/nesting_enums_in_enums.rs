@@ -18,6 +18,10 @@ enum RestaurantItem {
 }
 
 fn main() {
+    // you can use enums in enums
+    // basic but very powerful from a data modeling perspective
+    // enums are data types essentially, so they end up behaving more or less like structs
+    // and yes, rust's enums are on steroids
     let lunch = RestaurantItem::Burrito {
         meat: Meat::Steak,
         beans: Beans::Pinto,
@@ -26,6 +30,7 @@ fn main() {
         meat: Meat::Chicken,
         beans: Beans::Black,
     };
+
     let abandoned_meal = RestaurantItem::VeganPlate;
     println!("Lunch was {lunch:?} and dinner was {dinner:?}");
     println!("Nobody ate {abandoned_meal:?}");

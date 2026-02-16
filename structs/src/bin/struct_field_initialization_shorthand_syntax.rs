@@ -5,6 +5,8 @@ struct Coffee {
 }
 
 fn main() {
+    // common practice to match parameter name with variable name
+    // for structs
     let name = String::from("Latte");
     let coffee: Coffee = make_coffee(name, 4.99, true);
     println!(
@@ -15,6 +17,10 @@ fn main() {
     let name = String::from("Latte");
     let price = 3.99;
     let is_hot = false;
+
+    // we can simply provide the variables in order
+    // as long as they match the name arguments with the name field
+    #[allow(unused_variables)]
     let latte = Coffee {
         name,
         price,
