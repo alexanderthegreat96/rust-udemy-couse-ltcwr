@@ -1,4 +1,8 @@
 fn main() {
+    // rust prelude is a collection of named constructs
+    // that are available automatically in every program
+    // ex: Option enum, String is another one
+    // instead of using Option::Some -> you can do Some() directly
     let availability = is_item_in_stock(true, false);
 
     match availability {

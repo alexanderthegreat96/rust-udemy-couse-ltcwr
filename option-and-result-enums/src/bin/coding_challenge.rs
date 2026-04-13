@@ -64,3 +64,59 @@ of a valid address. Print out its return value. It should
 be the Ok variant nesting a Food struct with a `name` of
 "Burger".
 */
+#[derive(Debug)]
+#[allow(unused)]
+struct Food {
+    #[allow(unused_variables)]
+    name: String
+}
+
+#[derive(Debug)]
+struct Restaurant {
+    reservations: i32,
+    has_mice_infestation: bool
+}
+
+// a quick sidenote here
+// when we use a refference to self and not purely self
+// that means we borrow it, hence why using a ref
+
+impl Restaurant {
+    fn chef_special(&self) -> Option<Food> {
+        if self.has_mice_infestation {
+            return None
+        }
+
+        if self.reservations < 12 {
+            return Some(Food { name: "Uni Sashimi".to_string() })
+        } else {
+            return Some(Food { name: "Strip Steak".to_string() })
+        }
+    }
+
+    fn deliver_burger(&self, address:String) -> Result<Food, String> {
+        if address.len() < 1 || address.is_empty() {
+            return Err("Address is empty".to_string()); 
+        } else {
+            if self.has_mice_infestation {
+                return Err("We have a mice infestation".to_string());
+            } else {
+                Ok(Food { name: "Burger".to_string() })
+            }
+        }
+    }
+}
+
+fn main() {
+
+    let first: Restaurant = Restaurant { reservations: 10, has_mice_infestation: true};
+    println!("The special is: {:?}", first.chef_special());
+    println!("Deliver Burger: {:?}", first.deliver_burger("".to_string()));
+    println!("Deliver Burger: {:?}", first.deliver_burger("Somewhere else 123".to_string()));
+    
+
+    let second: Restaurant = Restaurant { reservations: 15, has_mice_infestation: false};
+    println!("The special is: {:?}", second.chef_special());
+    println!("{:?}", second.deliver_burger("".to_string()));
+    println!("{:?}", second.deliver_burger("Upper Farburn Road 123".to_string()));
+}

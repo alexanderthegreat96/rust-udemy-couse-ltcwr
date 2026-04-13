@@ -16,9 +16,37 @@ impl TreasureChest<[&str; 3]> {
     }
 }
 
+// normally, simply declaring impl TreasureChest<T> will not work
+// because rust is looking for a concrete type
+// if, however, there is a trully generic type requirement
+// say a function that has to be used across all types
+// then we use impl<T> TreasureChest<T>
+
 impl<T> TreasureChest<T> {
     fn capital_captain(&self) -> String {
         self.captain.to_uppercase()
+    }
+}
+
+struct Number<T> {
+    number: T,
+}
+
+impl<T> Number<T>
+where
+    T: std::fmt::LowerHex,
+{
+    fn as_hex(&self) -> String {
+        format!("{:x}", self.number)
+    }
+}
+
+impl<T> std::fmt::LowerHex for Number<T>
+where
+    T: std::fmt::LowerHex,
+{
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        std::fmt::LowerHex::fmt(&self.number, f)
     }
 }
 
@@ -43,4 +71,7 @@ fn main() {
     println!("{:?}", special_chest.amount_of_treasure());
     println!("{:?}", special_chest.capital_captain());
     println!("{:?}", special_chest);
+
+    let my_int: Number<i32> = Number { number: 120 };
+    println!("Int as hex: {}", my_int.as_hex());
 }

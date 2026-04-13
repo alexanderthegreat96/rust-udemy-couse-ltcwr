@@ -1,29 +1,31 @@
-#[derive(Debug, Copy, Clone)]
-enum MyOption {
+#![allow(dead_code)]
+
+enum Optional {
     Some(i32),
     None,
 }
 
-impl MyOption {
+impl Optional {
     fn unwrap(self) -> i32 {
         match self {
-            MyOption::Some(value) => value,
-            MyOption::None => panic!("Uh oh"),
+            Optional::Some(value) => value,
+            Optional::None => {
+                panic!("Nope, no value found")
+            }
         }
     }
 
-    fn unwrap_or(self, fallback_value: i32) -> i32 {
+    fn unwrap_or(self, default_val: i32) -> i32 {
         match self {
-            MyOption::Some(value) => value,
-            MyOption::None => fallback_value,
+            Optional::Some(value) => value,
+            Optional::None => default_val,
         }
     }
 }
 
 fn main() {
-    let some_option = MyOption::Some(100);
-    println!("{}", some_option.unwrap_or(13));
-
-    let none_option = MyOption::None;
-    println!("{}", none_option.unwrap_or(13));
+    let unwraped_number: i32 = Optional::None.unwrap_or(100);
+    println!("{}", unwraped_number);
+    let opt_number: Optional = Optional::None;
+    opt_number.unwrap();
 }
