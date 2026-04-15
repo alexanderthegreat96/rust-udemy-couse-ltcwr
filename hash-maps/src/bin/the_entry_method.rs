@@ -7,9 +7,14 @@ fn main() {
     coffee_pairings.insert(&drink, &milk);
     coffee_pairings.insert("Flat White", "Almond Milk");
 
+    // basically, the key is the entrypoint
+    // so we can use entry where the key is somehting or insert
     coffee_pairings.entry("Latte").or_insert("Pistachio Milk");
     println!("{coffee_pairings:?}");
 
+    // basically, if the key exists it will not insert
+    // so it will inseert a key value pair ONLY IF the key
+    // DOES NOT EXIST
     coffee_pairings
         .entry("Cappuccino")
         .or_insert("Pistachio Milk");

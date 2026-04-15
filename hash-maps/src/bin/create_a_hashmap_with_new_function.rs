@@ -6,14 +6,16 @@ fn main() {
     menu.insert(String::from("Steak"), 29.99);
     menu.insert(String::from("Tuna"), 29.29);
     menu.insert(String::from("Burger"), 14.99);
-
+    menu.entry("Eggs".to_string()).or_insert(10.99);
     println!("{:?}", menu);
 
     // let mut country_capitals: HashMap<&str, &str> = HashMap::new();
-    let mut country_capitals = HashMap::new();
+    let mut country_capitals = HashMap::<&str, &str>::new();
 
     country_capitals.insert("France", "Paris");
     country_capitals.insert("Germany", "Berlin");
 
     println!("{:?}", country_capitals);
 }
+
+

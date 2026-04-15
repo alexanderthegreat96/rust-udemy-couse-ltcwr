@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 /*
 Bring the HashMap type into the current's file's namespace.
 
@@ -41,3 +43,35 @@ The final result should be:
   "Mustard": ["Hot dog", "Burgers", "Pretzels"]
 }
 */
+fn main() {
+    let values: [(&str, Vec<&str>); 2] = [
+        ("Ketchup", ["French Fries", "Burgers", "Hotdogs"].to_vec()),
+        (
+            "Mayonnaise",
+            ["Sandwitches", "Burgers", "Coleslaw"].to_vec(),
+        ),
+    ];
+
+    let mut sauces_and_meals: HashMap<&str, Vec<&str>> = HashMap::from(values);
+    sauces_and_meals.insert("Mustard", ["Hot Dog", "Burgers", "Pretzels"].to_vec());
+    sauces_and_meals.remove("Mayonnaise");
+
+    let mustard_stuff: Option<&Vec<&str>> = sauces_and_meals.get("Mustard");
+    match mustard_stuff {
+        Some(meals) => {
+            println!("Meals using Mustard: {:?}", meals);
+        }
+        None => {
+            println!("Unable to find anything that uses mustard");
+        }
+    }
+
+    sauces_and_meals
+        .entry("Soy Sauce")
+        .or_insert(vec!["Sushi", "Dumplings"]);
+
+    println!(
+        "All of our main incredients + meals: {:#?}",
+        sauces_and_meals
+    );
+}
